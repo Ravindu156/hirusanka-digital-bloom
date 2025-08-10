@@ -1,6 +1,7 @@
 import { ArrowRight, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import ravindImage from "@/components/Images/ravindu.png";
 
 const Home = () => {
   return (
@@ -66,7 +67,7 @@ const Home = () => {
                 {/* Main profile image */}
                 <div className="relative bg-gradient-to-br from-accent to-primary p-1 rounded-full">
                   <img
-                    src="/lovable-uploads/29c932f2-3bd1-4bbb-89b5-fdc51ab7e8b7.png"
+                    src={ravindImage}
                     alt="Ravindu Hirusanka - Digital Marketer & IT Professional"
                     className="w-full h-auto rounded-full bg-background object-cover"
                   />
