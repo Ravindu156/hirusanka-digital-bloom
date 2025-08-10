@@ -7,6 +7,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import ravindImage from "@/components/Images/ravindu.png";
+import badge1 from "@/components/Images/Badges/1742742703839.jpeg";
+import badge2 from "@/components/Images/Badges/Screenshot 2025-08-10 161546.png";
+import badge3 from "@/components/Images/Badges/Screenshot 2025-08-10 162547.png";
 
 const Home = () => {
   const services = [
@@ -247,6 +250,73 @@ const Home = () => {
             <div className="text-center animate-fade-in" style={{animationDelay: '0.4s'}}>
               <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2">60%</div>
               <div className="text-sm text-gray-400">Faster Inquiry Response</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certified By Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Certified <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">By</span>
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Recognized expertise backed by industry-leading certifications and achievements
+            </p>
+          </div>
+          
+          <div className="flex justify-center items-center gap-8 lg:gap-12">
+            <div className="group text-center animate-fade-in hover:scale-105 transition-all duration-300" style={{animationDelay: '0.2s'}}>
+              <div className="relative">
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-cyan-400/20 to-purple-400/20 p-3 backdrop-blur-sm border border-cyan-400/30 group-hover:border-cyan-400/60 transition-all duration-300">
+                  <img
+                    src={badge1}
+                    alt="Digital Marketing Certification"
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center">
+                  <Award className="w-3 h-3 text-white" />
+                </div>
+              </div>
+              <div className="text-sm font-semibold text-white mb-1">Digital Marketing</div>
+              <div className="text-xs text-gray-400">Professional Certification</div>
+            </div>
+            
+            <div className="group text-center animate-fade-in hover:scale-105 transition-all duration-300" style={{animationDelay: '0.4s'}}>
+              <div className="relative">
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-400/20 to-cyan-400/20 p-3 backdrop-blur-sm border border-purple-400/30 group-hover:border-purple-400/60 transition-all duration-300">
+                  <img
+                    src={badge2}
+                    alt="Analytics Certification"
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full flex items-center justify-center">
+                  <Award className="w-3 h-3 text-white" />
+                </div>
+              </div>
+              <div className="text-sm font-semibold text-white mb-1">Analytics Expert</div>
+              <div className="text-xs text-gray-400">Advanced Certification</div>
+            </div>
+            
+            <div className="group text-center animate-fade-in hover:scale-105 transition-all duration-300" style={{animationDelay: '0.6s'}}>
+              <div className="relative">
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-cyan-400/20 to-purple-400/20 p-3 backdrop-blur-sm border border-cyan-400/30 group-hover:border-cyan-400/60 transition-all duration-300">
+                  <img
+                    src={badge3}
+                    alt="Excellence Award"
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center">
+                  <Award className="w-3 h-3 text-white" />
+                </div>
+              </div>
+              <div className="text-sm font-semibold text-white mb-1">Excellence Award</div>
+              <div className="text-xs text-gray-400">Industry Recognition</div>
             </div>
           </div>
         </div>
