@@ -7,9 +7,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import ravindImage from "@/components/Images/ravindu.png";
-import badge1 from "@/components/Images/Badges/1742742703839.jpeg";
-import badge2 from "@/components/Images/Badges/Screenshot 2025-08-10 161546.png";
-import badge3 from "@/components/Images/Badges/Screenshot 2025-08-10 162547.png";
 
 const Home = () => {
   const services = [
@@ -216,31 +213,6 @@ const Home = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-float"></div>
                 <div className="absolute top-10 right-10 w-20 h-20 bg-cyan-500/10 rounded-full animate-float" style={{animationDelay: '0.5s'}}></div>
                 <div className="absolute bottom-10 left-10 w-16 h-16 bg-purple-500/10 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
-                
-                {/* Badge Circles */}
-                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-slate-800/50 backdrop-blur-sm border border-cyan-400/30 p-2 animate-fade-in hover:scale-110 transition-transform duration-300" style={{animationDelay: '0.8s'}}>
-                  <img
-                    src={badge1}
-                    alt="Certification Badge 1"
-                    className="w-full h-full object-cover rounded-full"
-                  />
-                </div>
-                
-                <div className="absolute top-1/2 -right-8 transform -translate-y-1/2 w-16 h-16 rounded-full bg-slate-800/50 backdrop-blur-sm border border-purple-400/30 p-2 animate-fade-in hover:scale-110 transition-transform duration-300" style={{animationDelay: '1s'}}>
-                  <img
-                    src={badge2}
-                    alt="Certification Badge 2"
-                    className="w-full h-full object-cover rounded-full"
-                  />
-                </div>
-                
-                <div className="absolute -bottom-8 right-1/4 w-16 h-16 rounded-full bg-slate-800/50 backdrop-blur-sm border border-cyan-400/30 p-2 animate-fade-in hover:scale-110 transition-transform duration-300" style={{animationDelay: '1.2s'}}>
-                  <img
-                    src={badge3}
-                    alt="Certification Badge 3"
-                    className="w-full h-full object-cover rounded-full"
-                  />
-                </div>
                 
                 {/* Main profile image */}
                 <div className="relative bg-gradient-to-br from-cyan-400 to-purple-500 p-1 rounded-full">
