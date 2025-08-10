@@ -43,8 +43,10 @@ const About = () => {
               </p>
             </div>
             
-            <Button size="lg" className="mt-8 bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white border-0">
-              Download Resume
+            <Button size="lg" asChild className="mt-8 bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white border-0">
+              <a href="https://drive.google.com/file/d/1P7W6WNXWCzdOsLpMLzAitGJAAOR9bz-1/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                Download Resume
+              </a>
             </Button>
           </div>
 

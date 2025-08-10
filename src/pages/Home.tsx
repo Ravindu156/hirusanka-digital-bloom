@@ -182,9 +182,11 @@ const Home = () => {
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" className="group bg-white/10 text-white border-white/20 hover:bg-red-500 hover:text-white hover:border-red-500 backdrop-blur-sm">
-                  <Download className="mr-2 h-5 w-5" />
-                  Download Resume
+                <Button variant="outline" size="lg" asChild className="group bg-white/10 text-white border-white/20 hover:bg-red-500 hover:text-white hover:border-red-500 backdrop-blur-sm">
+                  <a href="https://drive.google.com/file/d/1P7W6WNXWCzdOsLpMLzAitGJAAOR9bz-1/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <Download className="mr-2 h-5 w-5" />
+                    Download Resume
+                  </a>
                 </Button>
               </div>
               
