@@ -7,9 +7,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import ravindImage from "@/components/Images/ravindu.png";
-import badge1 from "@/components/Images/Badges/1742742703839.jpeg";
-import badge2 from "@/components/Images/Badges/Screenshot 2025-08-10 161546.png";
-import badge3 from "@/components/Images/Badges/Screenshot 2025-08-10 162547.png";
 
 const Home = () => {
   const services = [
@@ -250,45 +247,6 @@ const Home = () => {
             <div className="text-center animate-fade-in" style={{animationDelay: '0.4s'}}>
               <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2">60%</div>
               <div className="text-sm text-gray-400">Faster Inquiry Response</div>
-            </div>
-          </div>
-          
-          {/* Achievement Badges */}
-          <div className="text-center mb-8 animate-fade-in" style={{animationDelay: '0.5s'}}>
-            <h3 className="text-2xl font-bold text-white mb-6">
-              Certifications & <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Achievements</span>
-            </h3>
-            <div className="flex justify-center items-center gap-8 lg:gap-12">
-              <div className="text-center animate-fade-in hover:scale-105 transition-transform duration-300" style={{animationDelay: '0.6s'}}>
-                <img
-                  src={badge1}
-                  alt="Digital Marketing Certification"
-                  className="h-20 w-auto object-contain rounded-lg shadow-lg hover:shadow-cyan-500/20 mx-auto mb-3"
-                />
-                <div className="text-sm font-semibold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  Certified
-                </div>
-              </div>
-              <div className="text-center animate-fade-in hover:scale-105 transition-transform duration-300" style={{animationDelay: '0.7s'}}>
-                <img
-                  src={badge2}
-                  alt="Professional Achievement Badge"
-                  className="h-20 w-auto object-contain rounded-lg shadow-lg hover:shadow-purple-500/20 mx-auto mb-3"
-                />
-                <div className="text-sm font-semibold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  Certified
-                </div>
-              </div>
-              <div className="text-center animate-fade-in hover:scale-105 transition-transform duration-300" style={{animationDelay: '0.8s'}}>
-                <img
-                  src={badge3}
-                  alt="Excellence Award"
-                  className="h-20 w-auto object-contain rounded-lg shadow-lg hover:shadow-cyan-500/20 mx-auto mb-3"
-                />
-                <div className="text-sm font-semibold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  Certified
-                </div>
-              </div>
             </div>
           </div>
         </div>
