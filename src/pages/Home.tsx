@@ -660,7 +660,7 @@ const Home = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-white">Email</h3>
-                    <p className="text-gray-300">ravindu@example.com</p>
+                    <p className="text-gray-300">ravinduneththasingha156@gmail.com</p>
                   </div>
                 </CardContent>
               </Card>
@@ -672,7 +672,7 @@ const Home = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-white">Phone</h3>
-                    <p className="text-gray-300">+94 77 123 4567</p>
+                    <p className="text-gray-300">+94 76 882 4741</p>
                   </div>
                 </CardContent>
               </Card>
@@ -684,7 +684,7 @@ const Home = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-white">Location</h3>
-                    <p className="text-gray-300">Colombo, Sri Lanka</p>
+                    <p className="text-gray-300">441/c, Dematagolla, Horampella, Minuwangoda</p>
                   </div>
                 </CardContent>
               </Card>
