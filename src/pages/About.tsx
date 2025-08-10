@@ -1,6 +1,7 @@
 import { GraduationCap, Award, Target, Users } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import ravindImage from "@/components/Images/ravindu.png";
 
 const About = () => {
   return (
@@ -51,7 +52,7 @@ const About = () => {
           <div className="space-y-8 animate-slide-up" style={{animationDelay: '0.2s'}}>
             <div className="relative">
               <img
-                src="/lovable-uploads/29c932f2-3bd1-4bbb-89b5-fdc51ab7e8b7.png"
+                src={ravindImage}
                 alt="Ravindu Hirusanka"
                 className="rounded-lg shadow-2xl w-full max-w-md mx-auto"
               />
