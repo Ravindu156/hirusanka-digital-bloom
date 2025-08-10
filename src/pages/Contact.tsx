@@ -4,8 +4,63 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { useState, useEffect } from "react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('');
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init('o8fIbY5Xi4y5oITC3');
+  }, []);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('');
+
+    try {
+      console.log('Sending email with data:', formData);
+      
+      const result = await emailjs.send(
+        'service_5fi1q6b',
+        'template_xy3b7jh',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_name: 'Ravindu',
+        }
+      );
+      
+      console.log('EmailJS result:', result);
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-24 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -25,29 +80,88 @@ const Contact = () => {
               <CardTitle className="text-white">Send Me a Message</CardTitle>
               <CardDescription className="text-gray-400">I'll get back to you within 24 hours</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="name" className="text-gray-300">Name</Label>
-                  <Input id="name" placeholder="Your name" className="bg-slate-700/50 border-slate-600 text-white placeholder:text-gray-400 focus:border-cyan-400" />
+            <CardContent>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="name" className="text-gray-300">Name</Label>
+                    <Input 
+                      id="name" 
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      placeholder="Your name" 
+                      className="bg-slate-700/50 border-slate-600 text-white placeholder:text-gray-400 focus:border-cyan-400" 
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="email" className="text-gray-300">Email</Label>
+                    <Input 
+                      id="email" 
+                      type="email" 
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="your@email.com" 
+                      className="bg-slate-700/50 border-slate-600 text-white placeholder:text-gray-400 focus:border-cyan-400" 
+                      required
+                    />
+                  </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-gray-300">Email</Label>
-                  <Input id="email" type="email" placeholder="your@email.com" className="bg-slate-700/50 border-slate-600 text-white placeholder:text-gray-400 focus:border-cyan-400" />
+                  <Label htmlFor="subject" className="text-gray-300">Subject</Label>
+                  <Input 
+                    id="subject" 
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    placeholder="Project inquiry" 
+                    className="bg-slate-700/50 border-slate-600 text-white placeholder:text-gray-400 focus:border-cyan-400" 
+                    required
+                  />
                 </div>
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="subject" className="text-gray-300">Subject</Label>
-                <Input id="subject" placeholder="Project inquiry" className="bg-slate-700/50 border-slate-600 text-white placeholder:text-gray-400 focus:border-cyan-400" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="message" className="text-gray-300">Message</Label>
-                <Textarea id="message" placeholder="Tell me about your project..." rows={6} className="bg-slate-700/50 border-slate-600 text-white placeholder:text-gray-400 focus:border-cyan-400" />
-              </div>
-              <Button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600" size="lg">
-                <Send className="mr-2 h-4 w-4" />
-                Send Message
-              </Button>
+                <div className="space-y-2">
+                  <Label htmlFor="message" className="text-gray-300">Message</Label>
+                  <Textarea 
+                    id="message" 
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    placeholder="Tell me about your project..." 
+                    rows={6} 
+                    className="bg-slate-700/50 border-slate-600 text-white placeholder:text-gray-400 focus:border-cyan-400" 
+                    required
+                  />
+                </div>
+                
+                {submitStatus === 'success' && (
+                  <div className="p-4 bg-green-500/20 border border-green-500/50 rounded-lg">
+                    <p className="text-green-400 text-sm">✅ Message sent successfully! I'll get back to you soon.</p>
+                  </div>
+                )}
+                
+                {submitStatus === 'error' && (
+                  <div className="p-4 bg-red-500/20 border border-red-500/50 rounded-lg">
+                    <p className="text-red-400 text-sm">❌ Failed to send message. Please try again or contact me directly.</p>
+                  </div>
+                )}
+                
+                <Button 
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600 disabled:opacity-50 disabled:cursor-not-allowed" 
+                  size="lg"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="mr-2 h-4 w-4" />
+                      Send Message
+                    </>
+                  )}
+                </Button>
+              </form>
             </CardContent>
           </Card>
 
