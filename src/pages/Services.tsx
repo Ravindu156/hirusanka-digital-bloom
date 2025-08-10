@@ -19,7 +19,7 @@ const Services = () => {
         "Performance Tracking & Reporting"
       ],
       results: "2.5x Average ROAS",
-      color: "text-accent"
+      color: "text-cyan-400"
     },
     {
       id: 2,
@@ -34,7 +34,7 @@ const Services = () => {
         "Continuous Performance Monitoring"
       ],
       results: "800+ Sales Generated",
-      color: "text-blue-500"
+      color: "text-blue-400"
     },
     {
       id: 3,
@@ -122,14 +122,14 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-24 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-            My <span className="text-accent">Services</span>
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+            My <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Services</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Comprehensive digital marketing and development services designed to 
             accelerate your business growth and maximize your online presence.
           </p>
@@ -140,35 +140,35 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={service.id}
-              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in"
+              className="group hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 hover:-translate-y-2 animate-fade-in bg-slate-800/50 border-slate-700 backdrop-blur-sm"
               style={{animationDelay: `${index * 0.1}s`}}
             >
               <CardHeader>
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className={`p-3 rounded-lg bg-background border ${service.color}`}>
+                  <div className={`p-3 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-slate-600 ${service.color}`}>
                     <service.icon className="h-6 w-6" />
                   </div>
-                  <Badge variant="outline" className="text-xs">
+                  <Badge variant="outline" className="text-xs border-cyan-400/50 text-cyan-400">
                     {service.results}
                   </Badge>
                 </div>
-                <CardTitle className="text-xl group-hover:text-accent transition-colors">
+                <CardTitle className="text-xl text-white group-hover:text-cyan-400 transition-colors">
                   {service.title}
                 </CardTitle>
-                <CardDescription className="text-base">
+                <CardDescription className="text-base text-gray-300">
                   {service.description}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-2 text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0"></div>
+                    <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-400">
+                      <div className="w-1.5 h-1.5 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex-shrink-0"></div>
                       <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full" variant="outline">
+                <Button className="w-full bg-slate-700/50 text-white border-slate-600 hover:bg-cyan-500/20 hover:text-cyan-400 hover:border-cyan-400" variant="outline">
                   Learn More
                 </Button>
               </CardContent>
@@ -179,10 +179,10 @@ const Services = () => {
         {/* Process Section */}
         <div className="mb-20">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              My <span className="text-accent">Process</span>
+            <h2 className="text-3xl font-bold text-white mb-4">
+              My <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Process</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               A proven methodology that ensures consistent results and exceptional client satisfaction
             </p>
           </div>
@@ -195,34 +195,34 @@ const Services = () => {
                 style={{animationDelay: `${index * 0.1}s`}}
               >
                 <div className="relative mb-6">
-                  <div className="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center mx-auto text-xl font-bold">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-full flex items-center justify-center mx-auto text-xl font-bold">
                     {process.step}
                   </div>
                   {index < processSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-border -translate-x-8"></div>
+                    <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 opacity-30 -translate-x-8"></div>
                   )}
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-3">{process.title}</h3>
-                <p className="text-sm text-muted-foreground">{process.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-3">{process.title}</h3>
+                <p className="text-sm text-gray-400">{process.description}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-card rounded-lg p-12 animate-fade-in">
-          <h2 className="text-3xl font-bold text-foreground mb-4">
-            Ready to Grow Your Business?
+        <div className="text-center bg-slate-800/50 border border-slate-700 backdrop-blur-sm rounded-lg p-12 animate-fade-in">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Grow</span> Your Business?
           </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Let's discuss how my digital marketing expertise can help you achieve 
             your business goals and drive measurable results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600">
               <Link to="/contact">Get Started Today</Link>
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" asChild className="bg-slate-700/50 text-white border-slate-600 hover:bg-cyan-500/20 hover:text-cyan-400 hover:border-cyan-400">
               <Link to="/portfolio">View My Work</Link>
             </Button>
           </div>

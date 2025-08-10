@@ -4,14 +4,14 @@ import { Button } from "@/components/ui/button";
 
 const About = () => {
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-24 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-            About <span className="text-accent">Me</span>
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+            About <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Me</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Passionate about bridging the gap between technology and marketing to create 
             exceptional digital experiences that drive real business results.
           </p>
@@ -21,8 +21,8 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Bio Text */}
           <div className="space-y-6 animate-slide-up">
-            <h2 className="text-3xl font-bold text-foreground mb-6">My Story</h2>
-            <div className="prose prose-lg text-muted-foreground space-y-4">
+            <h2 className="text-3xl font-bold text-white mb-6">My Story</h2>
+            <div className="prose prose-lg text-gray-300 space-y-4">
               <p>
                 Results-driven Senior Digital Marketer with a Bachelor's in Information Technology 
                 and 4+ years of experience in social media management and brand growth. 
@@ -42,7 +42,7 @@ const About = () => {
               </p>
             </div>
             
-            <Button size="lg" className="mt-8">
+            <Button size="lg" className="mt-8 bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white border-0">
               Download Resume
             </Button>
           </div>
@@ -59,16 +59,16 @@ const About = () => {
             
             {/* Key Highlights */}
             <div className="grid grid-cols-2 gap-4">
-              <Card>
+              <Card className="bg-slate-800/50 border-slate-700 backdrop-blur-sm">
                 <CardContent className="p-4 text-center">
-                  <div className="text-2xl font-bold text-accent mb-1">4+</div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
+                  <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-1">4+</div>
+                  <div className="text-sm text-gray-400">Years Experience</div>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="bg-slate-800/50 border-slate-700 backdrop-blur-sm">
                 <CardContent className="p-4 text-center">
-                  <div className="text-2xl font-bold text-accent mb-1">50+</div>
-                  <div className="text-sm text-muted-foreground">Projects Completed</div>
+                  <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-1">50+</div>
+                  <div className="text-sm text-gray-400">Projects Completed</div>
                 </CardContent>
               </Card>
             </div>
@@ -78,66 +78,66 @@ const About = () => {
         {/* Education & Career Highlights */}
         <div className="grid md:grid-cols-3 gap-8">
           {/* Education */}
-          <Card className="animate-fade-in" style={{animationDelay: '0.3s'}}>
+          <Card className="animate-fade-in bg-slate-800/50 border-slate-700 backdrop-blur-sm" style={{animationDelay: '0.3s'}}>
             <CardHeader>
               <div className="flex items-center space-x-2">
-                <GraduationCap className="h-6 w-6 text-accent" />
-                <CardTitle>Education</CardTitle>
+                <GraduationCap className="h-6 w-6 text-cyan-400" />
+                <CardTitle className="text-white">Education</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-semibold text-foreground">BSc. Information Technology</h3>
-                  <p className="text-sm text-muted-foreground">University Degree</p>
+                  <h3 className="font-semibold text-white">BSc. Information Technology</h3>
+                  <p className="text-sm text-gray-400">University Degree</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground">Multiple Certifications</h3>
-                  <p className="text-sm text-muted-foreground">Google Analytics, HubSpot, and more</p>
+                  <h3 className="font-semibold text-white">Multiple Certifications</h3>
+                  <p className="text-sm text-gray-400">Google Analytics, HubSpot, and more</p>
                 </div>
               </div>
             </CardContent>
           </Card>
 
           {/* Expertise */}
-          <Card className="animate-fade-in" style={{animationDelay: '0.4s'}}>
+          <Card className="animate-fade-in bg-slate-800/50 border-slate-700 backdrop-blur-sm" style={{animationDelay: '0.4s'}}>
             <CardHeader>
               <div className="flex items-center space-x-2">
-                <Target className="h-6 w-6 text-accent" />
-                <CardTitle>Expertise</CardTitle>
+                <Target className="h-6 w-6 text-purple-400" />
+                <CardTitle className="text-white">Expertise</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-semibold text-foreground">Digital Marketing</h3>
-                  <p className="text-sm text-muted-foreground">Social Media, SEO, Paid Ads</p>
+                  <h3 className="font-semibold text-white">Digital Marketing</h3>
+                  <p className="text-sm text-gray-400">Social Media, SEO, Paid Ads</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground">Web Development</h3>
-                  <p className="text-sm text-muted-foreground">React, Node.js, Full-stack</p>
+                  <h3 className="font-semibold text-white">Web Development</h3>
+                  <p className="text-sm text-gray-400">React, Node.js, Full-stack</p>
                 </div>
               </div>
             </CardContent>
           </Card>
 
           {/* Achievements */}
-          <Card className="animate-fade-in" style={{animationDelay: '0.5s'}}>
+          <Card className="animate-fade-in bg-slate-800/50 border-slate-700 backdrop-blur-sm" style={{animationDelay: '0.5s'}}>
             <CardHeader>
               <div className="flex items-center space-x-2">
-                <Award className="h-6 w-6 text-accent" />
-                <CardTitle>Achievements</CardTitle>
+                <Award className="h-6 w-6 text-cyan-400" />
+                <CardTitle className="text-white">Achievements</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-semibold text-foreground">2.5x ROAS</h3>
-                  <p className="text-sm text-muted-foreground">Average Facebook Ads Performance</p>
+                  <h3 className="font-semibold text-white">2.5x ROAS</h3>
+                  <p className="text-sm text-gray-400">Average Facebook Ads Performance</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground">800+ Sales</h3>
-                  <p className="text-sm text-muted-foreground">Generated for Ceylon Handloom</p>
+                  <h3 className="font-semibold text-white">800+ Sales</h3>
+                  <p className="text-sm text-gray-400">Generated for Ceylon Handloom</p>
                 </div>
               </div>
             </CardContent>
