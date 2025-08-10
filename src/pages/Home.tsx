@@ -258,27 +258,36 @@ const Home = () => {
             <h3 className="text-2xl font-bold text-white mb-6">
               Certifications & <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Achievements</span>
             </h3>
-            <div className="flex flex-wrap justify-center items-center gap-6 lg:gap-8">
-              <div className="animate-fade-in hover:scale-105 transition-transform duration-300" style={{animationDelay: '0.6s'}}>
+            <div className="flex justify-center items-center gap-8 lg:gap-12">
+              <div className="text-center animate-fade-in hover:scale-105 transition-transform duration-300" style={{animationDelay: '0.6s'}}>
                 <img
                   src={badge1}
                   alt="Digital Marketing Certification"
-                  className="h-20 w-auto object-contain rounded-lg shadow-lg hover:shadow-cyan-500/20"
+                  className="h-20 w-auto object-contain rounded-lg shadow-lg hover:shadow-cyan-500/20 mx-auto mb-3"
                 />
+                <div className="text-sm font-semibold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  Certified
+                </div>
               </div>
-              <div className="animate-fade-in hover:scale-105 transition-transform duration-300" style={{animationDelay: '0.7s'}}>
+              <div className="text-center animate-fade-in hover:scale-105 transition-transform duration-300" style={{animationDelay: '0.7s'}}>
                 <img
                   src={badge2}
                   alt="Professional Achievement Badge"
-                  className="h-20 w-auto object-contain rounded-lg shadow-lg hover:shadow-purple-500/20"
+                  className="h-20 w-auto object-contain rounded-lg shadow-lg hover:shadow-purple-500/20 mx-auto mb-3"
                 />
+                <div className="text-sm font-semibold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  Certified
+                </div>
               </div>
-              <div className="animate-fade-in hover:scale-105 transition-transform duration-300" style={{animationDelay: '0.8s'}}>
+              <div className="text-center animate-fade-in hover:scale-105 transition-transform duration-300" style={{animationDelay: '0.8s'}}>
                 <img
                   src={badge3}
                   alt="Excellence Award"
-                  className="h-20 w-auto object-contain rounded-lg shadow-lg hover:shadow-cyan-500/20"
+                  className="h-20 w-auto object-contain rounded-lg shadow-lg hover:shadow-cyan-500/20 mx-auto mb-3"
                 />
+                <div className="text-sm font-semibold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  Certified
+                </div>
               </div>
             </div>
           </div>
