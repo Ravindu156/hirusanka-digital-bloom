@@ -23,6 +23,11 @@ const Home = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
 
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init('o8fIbY5Xi4y5oITC3');
+  }, []);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
     setFormData(prev => ({
@@ -37,7 +42,9 @@ const Home = () => {
     setSubmitStatus('');
 
     try {
-      await emailjs.send(
+      console.log('Sending email with data:', formData);
+      
+      const result = await emailjs.send(
         'service_5fi1q6b',
         'template_xy3b7jh',
         {
@@ -46,10 +53,10 @@ const Home = () => {
           subject: formData.subject,
           message: formData.message,
           to_name: 'Ravindu',
-        },
-        'o8fIbY5Xi4y5oITC3'
+        }
       );
       
+      console.log('EmailJS result:', result);
       setSubmitStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
