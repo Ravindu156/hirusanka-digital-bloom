@@ -153,7 +153,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section id="home" className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -161,14 +161,14 @@ const Home = () => {
             {/* Content */}
             <div className="space-y-8 animate-fade-in">
               <div className="space-y-4">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
                   Hey There,{" "}
-                  <span className="block text-accent">I'm Ravindu</span>
+                  <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">I'm Ravindu</span>
                 </h1>
-                <p className="text-xl sm:text-2xl text-muted-foreground font-medium">
+                <p className="text-xl sm:text-2xl text-gray-300 font-medium">
                   Results-driven Digital Marketer & IT Professional
                 </p>
-                <p className="text-lg text-muted-foreground max-w-xl">
+                <p className="text-lg text-gray-400 max-w-xl">
                   Transforming businesses through data-driven marketing strategies 
                   and cutting-edge web solutions. 4+ years of proven success in 
                   maximizing ROI and driving measurable results.
@@ -176,13 +176,13 @@ const Home = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="group">
+                <Button asChild size="lg" className="group bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white border-0">
                   <a href="#portfolio">
                     Explore My Work
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" className="group bg-white text-black border-white hover:bg-gray-100">
+                <Button variant="outline" size="lg" className="group bg-white/10 text-white border-white/20 hover:bg-red-500 hover:text-white hover:border-red-500 backdrop-blur-sm">
                   <Download className="mr-2 h-5 w-5" />
                   Download Resume
                 </Button>
@@ -190,16 +190,16 @@ const Home = () => {
               
               <div className="flex items-center space-x-8 pt-4">
                 <div>
-                  <div className="text-2xl font-bold text-accent">4+</div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
+                  <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">4+</div>
+                  <div className="text-sm text-gray-400">Years Experience</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-accent">800+</div>
-                  <div className="text-sm text-muted-foreground">Successful Sales</div>
+                  <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">800+</div>
+                  <div className="text-sm text-gray-400">Successful Sales</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-accent">2.5x</div>
-                  <div className="text-sm text-muted-foreground">Average ROAS</div>
+                  <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">2.5x</div>
+                  <div className="text-sm text-gray-400">Average ROAS</div>
                 </div>
               </div>
             </div>
@@ -208,16 +208,16 @@ const Home = () => {
             <div className="relative animate-slide-up">
               <div className="relative w-full max-w-md mx-auto">
                 {/* Background decorative elements */}
-                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 rounded-full blur-3xl animate-float"></div>
-                <div className="absolute top-10 right-10 w-20 h-20 bg-accent/10 rounded-full animate-float" style={{animationDelay: '0.5s'}}></div>
-                <div className="absolute bottom-10 left-10 w-16 h-16 bg-primary/10 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-float"></div>
+                <div className="absolute top-10 right-10 w-20 h-20 bg-cyan-500/10 rounded-full animate-float" style={{animationDelay: '0.5s'}}></div>
+                <div className="absolute bottom-10 left-10 w-16 h-16 bg-purple-500/10 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
                 
                 {/* Main profile image */}
-                <div className="relative bg-gradient-to-br from-accent to-primary p-1 rounded-full">
+                <div className="relative bg-gradient-to-br from-cyan-400 to-purple-500 p-1 rounded-full">
                   <img
                     src={ravindImage}
                     alt="Ravindu Hirusanka - Digital Marketer & IT Professional"
-                    className="w-full h-auto rounded-full bg-background object-cover"
+                    className="w-full h-auto rounded-full bg-slate-900 object-cover"
                   />
                 </div>
               </div>
@@ -227,37 +227,37 @@ const Home = () => {
       </section>
       
       {/* Quick Stats */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-card/50">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center animate-fade-in" style={{animationDelay: '0.1s'}}>
-              <div className="text-3xl font-bold text-accent mb-2">150%</div>
-              <div className="text-sm text-muted-foreground">Artisan Income Boost</div>
+              <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2">150%</div>
+              <div className="text-sm text-gray-400">Artisan Income Boost</div>
             </div>
             <div className="text-center animate-fade-in" style={{animationDelay: '0.2s'}}>
-              <div className="text-3xl font-bold text-accent mb-2">40%</div>
-              <div className="text-sm text-muted-foreground">Conversion Rate Improvement</div>
+              <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2">40%</div>
+              <div className="text-sm text-gray-400">Conversion Rate Improvement</div>
             </div>
             <div className="text-center animate-fade-in" style={{animationDelay: '0.3s'}}>
-              <div className="text-3xl font-bold text-accent mb-2">300%</div>
-              <div className="text-sm text-muted-foreground">Brand Awareness Increase</div>
+              <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2">300%</div>
+              <div className="text-sm text-gray-400">Brand Awareness Increase</div>
             </div>
             <div className="text-center animate-fade-in" style={{animationDelay: '0.4s'}}>
-              <div className="text-3xl font-bold text-accent mb-2">60%</div>
-              <div className="text-sm text-muted-foreground">Faster Inquiry Response</div>
+              <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2">60%</div>
+              <div className="text-sm text-gray-400">Faster Inquiry Response</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 px-4 sm:px-6 lg:px-8">
+      <section id="about" className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-              About <span className="text-accent">Me</span>
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+              About <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Me</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Passionate about bridging the gap between technology and marketing to create 
               exceptional digital experiences that drive real business results.
             </p>
@@ -265,8 +265,8 @@ const Home = () => {
 
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="space-y-6 animate-slide-up">
-              <h3 className="text-3xl font-bold text-foreground">My Story</h3>
-              <div className="prose prose-lg text-muted-foreground space-y-4">
+              <h3 className="text-3xl font-bold text-white">My Story</h3>
+              <div className="prose prose-lg text-gray-300 space-y-4">
                 <p>
                   Results-driven Senior Digital Marketer with a Bachelor's in Information Technology 
                   and 4+ years of experience in social media management and brand growth. 
@@ -282,18 +282,18 @@ const Home = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-6 animate-slide-up">
-              <Card className="text-center">
+              <Card className="text-center bg-slate-800/50 border-slate-700 backdrop-blur-sm">
                 <CardContent className="pt-6">
-                  <Award className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-foreground mb-2">4+</div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
+                  <Award className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                  <div className="text-2xl font-bold text-white mb-2">4+</div>
+                  <div className="text-sm text-gray-400">Years Experience</div>
                 </CardContent>
               </Card>
-              <Card className="text-center">
+              <Card className="text-center bg-slate-800/50 border-slate-700 backdrop-blur-sm">
                 <CardContent className="pt-6">
-                  <Users className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-foreground mb-2">50+</div>
-                  <div className="text-sm text-muted-foreground">Happy Clients</div>
+                  <Users className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+                  <div className="text-2xl font-bold text-white mb-2">50+</div>
+                  <div className="text-sm text-gray-400">Happy Clients</div>
                 </CardContent>
               </Card>
             </div>
@@ -302,39 +302,39 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 px-4 sm:px-6 lg:px-8 bg-card/50">
+      <section id="services" className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-800/30 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-              My <span className="text-accent">Services</span>
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+              My <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Services</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive digital solutions designed to accelerate your business growth and maximize ROI.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={service.id} className="animate-slide-up hover:shadow-lg transition-shadow" style={{animationDelay: `${index * 0.1}s`}}>
+              <Card key={service.id} className="animate-slide-up hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 bg-slate-800/50 border-slate-700 backdrop-blur-sm" style={{animationDelay: `${index * 0.1}s`}}>
                 <CardHeader>
                   <div className="flex items-center space-x-4 mb-4">
-                    <div className={`p-3 rounded-lg bg-accent/10`}>
-                      <service.icon className={`w-6 h-6 ${service.color}`} />
+                    <div className={`p-3 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20`}>
+                      <service.icon className={`w-6 h-6 ${service.color === 'text-accent' ? 'text-cyan-400' : service.color === 'text-blue-500' ? 'text-blue-400' : 'text-pink-400'}`} />
                     </div>
                     <div>
-                      <CardTitle className="text-xl">{service.title}</CardTitle>
-                      <Badge variant="outline" className="mt-2">{service.results}</Badge>
+                      <CardTitle className="text-xl text-white">{service.title}</CardTitle>
+                      <Badge variant="outline" className="mt-2 border-cyan-400/50 text-cyan-400">{service.results}</Badge>
                     </div>
                   </div>
-                  <CardDescription className="text-base">
+                  <CardDescription className="text-base text-gray-300">
                     {service.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
-                        <div className="w-1.5 h-1.5 bg-accent rounded-full mr-3" />
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                        <div className="w-1.5 h-1.5 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full mr-3" />
                         {feature}
                       </li>
                     ))}
@@ -347,32 +347,32 @@ const Home = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8">
+      <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-              My <span className="text-accent">Skills</span>
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+              My <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Skills</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               A diverse skill set combining technical expertise with marketing excellence.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skillCategories.map((category, index) => (
-              <Card key={category.id} className="animate-slide-up" style={{animationDelay: `${index * 0.1}s`}}>
+              <Card key={category.id} className="animate-slide-up bg-slate-800/50 border-slate-700 backdrop-blur-sm hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300" style={{animationDelay: `${index * 0.1}s`}}>
                 <CardHeader>
                   <div className="flex items-center space-x-4">
-                    <div className={`p-3 rounded-lg bg-accent/10`}>
-                      <category.icon className={`w-6 h-6 ${category.color}`} />
+                    <div className={`p-3 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20`}>
+                      <category.icon className={`w-6 h-6 ${category.color === 'text-accent' ? 'text-cyan-400' : category.color === 'text-blue-500' ? 'text-blue-400' : 'text-green-400'}`} />
                     </div>
-                    <CardTitle className="text-xl">{category.title}</CardTitle>
+                    <CardTitle className="text-xl text-white">{category.title}</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill, skillIndex) => (
-                      <Badge key={skillIndex} variant="secondary" className="text-xs">
+                      <Badge key={skillIndex} variant="secondary" className="text-xs bg-slate-700/50 text-gray-300 border-slate-600">
                         {skill}
                       </Badge>
                     ))}
@@ -385,29 +385,29 @@ const Home = () => {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-24 px-4 sm:px-6 lg:px-8 bg-card/50">
+      <section id="experience" className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-800/30 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-              Professional <span className="text-accent">Experience</span>
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+              Professional <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Experience</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               A track record of delivering exceptional results and driving business growth.
             </p>
           </div>
 
           <div className="space-y-8">
             {experiences.map((experience, index) => (
-              <Card key={experience.id} className="animate-slide-up" style={{animationDelay: `${index * 0.2}s`}}>
+              <Card key={experience.id} className="animate-slide-up bg-slate-800/50 border-slate-700 backdrop-blur-sm hover:shadow-lg hover:shadow-cyan-500/10 transition-all duration-300" style={{animationDelay: `${index * 0.2}s`}}>
                 <CardHeader>
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                     <div>
-                      <CardTitle className="text-2xl mb-2">{experience.position}</CardTitle>
-                      <div className="flex items-center text-accent font-semibold mb-2">
+                      <CardTitle className="text-2xl mb-2 text-white">{experience.position}</CardTitle>
+                      <div className="flex items-center text-cyan-400 font-semibold mb-2">
                         <span>{experience.company}</span>
-                        <Badge variant="outline" className="ml-2">{experience.type}</Badge>
+                        <Badge variant="outline" className="ml-2 border-purple-400/50 text-purple-400">{experience.type}</Badge>
                       </div>
-                      <div className="flex items-center text-muted-foreground text-sm space-x-4">
+                      <div className="flex items-center text-gray-400 text-sm space-x-4">
                         <div className="flex items-center">
                           <Calendar className="w-4 h-4 mr-1" />
                           {experience.duration}
@@ -419,28 +419,28 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-                  <CardDescription className="text-base mt-4">
+                  <CardDescription className="text-base mt-4 text-gray-300">
                     {experience.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-foreground mb-3">Key Achievements:</h4>
+                      <h4 className="font-semibold text-white mb-3">Key Achievements:</h4>
                       <ul className="space-y-2">
                         {experience.achievements.map((achievement, achievementIndex) => (
-                          <li key={achievementIndex} className="flex items-start text-muted-foreground">
-                            <TrendingUp className="w-4 h-4 text-accent mr-3 mt-0.5 flex-shrink-0" />
+                          <li key={achievementIndex} className="flex items-start text-gray-300">
+                            <TrendingUp className="w-4 h-4 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" />
                             {achievement}
                           </li>
                         ))}
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-3">Technologies & Skills:</h4>
+                      <h4 className="font-semibold text-white mb-3">Technologies & Skills:</h4>
                       <div className="flex flex-wrap gap-2">
                         {experience.skills.map((skill, skillIndex) => (
-                          <Badge key={skillIndex} variant="secondary">
+                          <Badge key={skillIndex} variant="secondary" className="bg-slate-700/50 text-gray-300 border-slate-600">
                             {skill}
                           </Badge>
                         ))}
@@ -455,52 +455,52 @@ const Home = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-24 px-4 sm:px-6 lg:px-8">
+      <section id="portfolio" className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-              Featured <span className="text-accent">Projects</span>
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+              Featured <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Projects</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Showcasing innovative solutions that demonstrate technical excellence and creative problem-solving.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <Card key={project.id} className="group hover:shadow-xl transition-all duration-300 animate-slide-up" style={{animationDelay: `${index * 0.1}s`}}>
+              <Card key={project.id} className="group hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 animate-slide-up bg-slate-800/50 border-slate-700 backdrop-blur-sm" style={{animationDelay: `${index * 0.1}s`}}>
                 <CardHeader>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className="p-2 rounded-lg bg-accent/10">
-                        <project.icon className="w-6 h-6 text-accent" />
+                      <div className="p-2 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20">
+                        <project.icon className="w-6 h-6 text-cyan-400" />
                       </div>
                       <div>
-                        <CardTitle className="text-xl">{project.title}</CardTitle>
-                        <Badge variant="outline" className="mt-1">{project.category}</Badge>
+                        <CardTitle className="text-xl text-white">{project.title}</CardTitle>
+                        <Badge variant="outline" className="mt-1 border-purple-400/50 text-purple-400">{project.category}</Badge>
                       </div>
                     </div>
                     <div className="flex space-x-2">
-                      <Button size="sm" variant="outline">
+                      <Button size="sm" variant="outline" className="border-slate-600 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400 hover:border-cyan-400">
                         <ExternalLink className="w-4 h-4" />
                       </Button>
-                      <Button size="sm" variant="outline">
+                      <Button size="sm" variant="outline" className="border-slate-600 text-gray-300 hover:bg-purple-500/20 hover:text-purple-400 hover:border-purple-400">
                         <Github className="w-4 h-4" />
                       </Button>
                     </div>
                   </div>
-                  <CardDescription className="text-base mt-4">
+                  <CardDescription className="text-base mt-4 text-gray-300">
                     {project.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-foreground mb-3">Key Features:</h4>
+                      <h4 className="font-semibold text-white mb-3">Key Features:</h4>
                       <ul className="space-y-2">
                         {project.achievements.map((achievement, achievementIndex) => (
-                          <li key={achievementIndex} className="flex items-start text-muted-foreground text-sm">
-                            <Star className="w-4 h-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                          <li key={achievementIndex} className="flex items-start text-gray-300 text-sm">
+                            <Star className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                             {achievement}
                           </li>
                         ))}
@@ -508,10 +508,10 @@ const Home = () => {
                     </div>
                     
                     <div>
-                      <h4 className="font-semibold text-foreground mb-3">Technologies:</h4>
+                      <h4 className="font-semibold text-white mb-3">Technologies:</h4>
                       <div className="flex flex-wrap gap-2">
                         {project.technologies.map((tech, techIndex) => (
-                          <Badge key={techIndex} variant="secondary" className="text-xs">
+                          <Badge key={techIndex} variant="secondary" className="text-xs bg-slate-700/50 text-gray-300 border-slate-600">
                             {tech}
                           </Badge>
                         ))}
@@ -521,8 +521,8 @@ const Home = () => {
                     <div className="grid grid-cols-2 gap-4 pt-4">
                       {Object.entries(project.metrics).map(([key, value]) => (
                         <div key={key} className="text-center">
-                          <div className="text-lg font-bold text-accent">{value}</div>
-                          <div className="text-xs text-muted-foreground capitalize">{key}</div>
+                          <div className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">{value}</div>
+                          <div className="text-xs text-gray-400 capitalize">{key}</div>
                         </div>
                       ))}
                     </div>
@@ -535,44 +535,44 @@ const Home = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-card/50">
+      <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-800/30 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-              Get In <span className="text-accent">Touch</span>
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+              Get In <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Touch</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Ready to take your business to the next level? Let's discuss your project and explore how I can help you achieve your goals.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="animate-slide-up">
+            <Card className="animate-slide-up bg-slate-800/50 border-slate-700 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle>Send Me a Message</CardTitle>
-                <CardDescription>I'll get back to you within 24 hours</CardDescription>
+                <CardTitle className="text-white">Send Me a Message</CardTitle>
+                <CardDescription className="text-gray-300">I'll get back to you within 24 hours</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
-                    <Input id="name" placeholder="Your name" />
+                    <Label htmlFor="name" className="text-gray-300">Name</Label>
+                    <Input id="name" placeholder="Your name" className="bg-slate-700/50 border-slate-600 text-white placeholder:text-gray-400" />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="your@email.com" />
+                    <Label htmlFor="email" className="text-gray-300">Email</Label>
+                    <Input id="email" type="email" placeholder="your@email.com" className="bg-slate-700/50 border-slate-600 text-white placeholder:text-gray-400" />
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="subject">Subject</Label>
-                  <Input id="subject" placeholder="Project inquiry" />
+                  <Label htmlFor="subject" className="text-gray-300">Subject</Label>
+                  <Input id="subject" placeholder="Project inquiry" className="bg-slate-700/50 border-slate-600 text-white placeholder:text-gray-400" />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea id="message" placeholder="Tell me about your project..." rows={6} />
+                  <Label htmlFor="message" className="text-gray-300">Message</Label>
+                  <Textarea id="message" placeholder="Tell me about your project..." rows={6} className="bg-slate-700/50 border-slate-600 text-white placeholder:text-gray-400" />
                 </div>
-                <Button className="w-full" size="lg">
+                <Button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white border-0" size="lg">
                   <Send className="mr-2 h-4 w-4" />
                   Send Message
                 </Button>
@@ -581,50 +581,50 @@ const Home = () => {
 
             {/* Contact Info */}
             <div className="space-y-8 animate-slide-up">
-              <Card>
+              <Card className="bg-slate-800/50 border-slate-700 backdrop-blur-sm">
                 <CardContent className="flex items-center space-x-4 pt-6">
-                  <div className="p-3 rounded-lg bg-accent/10">
-                    <Mail className="w-6 h-6 text-accent" />
+                  <div className="p-3 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20">
+                    <Mail className="w-6 h-6 text-cyan-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground">Email</h3>
-                    <p className="text-muted-foreground">ravindu@example.com</p>
+                    <h3 className="font-semibold text-white">Email</h3>
+                    <p className="text-gray-300">ravindu@example.com</p>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="bg-slate-800/50 border-slate-700 backdrop-blur-sm">
                 <CardContent className="flex items-center space-x-4 pt-6">
-                  <div className="p-3 rounded-lg bg-accent/10">
-                    <Phone className="w-6 h-6 text-accent" />
+                  <div className="p-3 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20">
+                    <Phone className="w-6 h-6 text-purple-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground">Phone</h3>
-                    <p className="text-muted-foreground">+94 77 123 4567</p>
+                    <h3 className="font-semibold text-white">Phone</h3>
+                    <p className="text-gray-300">+94 77 123 4567</p>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="bg-slate-800/50 border-slate-700 backdrop-blur-sm">
                 <CardContent className="flex items-center space-x-4 pt-6">
-                  <div className="p-3 rounded-lg bg-accent/10">
-                    <MapPin className="w-6 h-6 text-accent" />
+                  <div className="p-3 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20">
+                    <MapPin className="w-6 h-6 text-cyan-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground">Location</h3>
-                    <p className="text-muted-foreground">Colombo, Sri Lanka</p>
+                    <h3 className="font-semibold text-white">Location</h3>
+                    <p className="text-gray-300">Colombo, Sri Lanka</p>
                   </div>
                 </CardContent>
               </Card>
 
               <div className="flex space-x-4 pt-4">
-                <Button variant="outline" size="icon">
+                <Button variant="outline" size="icon" className="border-slate-600 text-gray-300 hover:bg-slate-700 hover:text-cyan-400 hover:border-cyan-400">
                   <Github className="w-5 h-5" />
                 </Button>
-                <Button variant="outline" size="icon">
+                <Button variant="outline" size="icon" className="border-slate-600 text-gray-300 hover:bg-slate-700 hover:text-purple-400 hover:border-purple-400">
                   <Linkedin className="w-5 h-5" />
                 </Button>
-                <Button variant="outline" size="icon">
+                <Button variant="outline" size="icon" className="border-slate-600 text-gray-300 hover:bg-slate-700 hover:text-cyan-400 hover:border-cyan-400">
                   <Mail className="w-5 h-5" />
                 </Button>
               </div>
