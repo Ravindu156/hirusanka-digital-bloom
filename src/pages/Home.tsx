@@ -182,7 +182,7 @@ const Home = () => {
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" className="group">
+                <Button variant="outline" size="lg" className="group bg-white text-black border-white hover:bg-gray-100">
                   <Download className="mr-2 h-5 w-5" />
                   Download Resume
                 </Button>
