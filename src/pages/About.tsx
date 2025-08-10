@@ -24,7 +24,7 @@ const About = () => {
             <h2 className="text-3xl font-bold text-foreground mb-6">My Story</h2>
             <div className="prose prose-lg text-muted-foreground space-y-4">
               <p>
-                Results-driven Digital Marketer with a Bachelor's in Information Technology 
+                Results-driven Senior Digital Marketer with a Bachelor's in Information Technology 
                 and 4+ years of experience in social media management and brand growth. 
                 I specialize in crafting data-driven marketing strategies that maximize 
                 engagement, conversions, and ROI.
