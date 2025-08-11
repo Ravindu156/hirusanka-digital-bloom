@@ -60,7 +60,7 @@ const Portfolio = () => {
       title: "Ceylon Handloom",
       category: "Digital Marketing Campaign",
       description: "Comprehensive digital marketing transformation for a traditional handloom business, including e-commerce development, social media strategy, and performance marketing campaigns.",
-      image: "/placeholder.svg",
+      image: "/ceylon.jpg",
       icon: Users,
       achievements: [
         "800+ sales generated",
@@ -85,7 +85,7 @@ const Portfolio = () => {
       title: "SMS Garment Association",
       category: "SEO & Platform Development",
       description: "Development and SEO optimization of a comprehensive platform serving 50+ garment businesses, with official endorsement from the Ministry of Industries.",
-      image: "/placeholder.svg",
+      image: "/sms-garment.png",
       icon: Star,
       achievements: [
         "50+ businesses onboarded",
