@@ -2,8 +2,6 @@ import { ExternalLink, Github, Star, Users, ShoppingCart, BookOpen } from "lucid
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import perfumePulseImage from "@/components/Images/projects/purfumepulse.jpg";
-import recipeRealmImage from "@/components/Images/projects/reciperealm.jpg";
 
 const Portfolio = () => {
   const projects = [
@@ -12,7 +10,7 @@ const Portfolio = () => {
       title: "PerfumePulse",
       category: "E-commerce Platform",
       description: "A sophisticated e-commerce perfume platform featuring personalized recommendation system, advanced wishlist functionality, secure payment integration, and comprehensive inventory management.",
-      image: perfumePulseImage,
+      image: "/purfumepulse.jpg",
       icon: ShoppingCart,
       achievements: [
         "85% user satisfaction rate",
@@ -37,7 +35,7 @@ const Portfolio = () => {
       title: "RecipeRealm",
       category: "Smart Recipe Platform",
       description: "An intelligent recipe suggestion platform with machine learning-powered preference learning, advanced search capabilities, nutritional information integration, and personalized meal planning.",
-      image: recipeRealmImage,
+      image: "/reciperealm.jpg",
       icon: BookOpen,
       achievements: [
         "70% improved recipe accuracy",
@@ -172,9 +170,13 @@ const Portfolio = () => {
               </CardHeader>
               
               <CardContent className="space-y-6">
-                {/* Project Image Placeholder */}
-                <div className="aspect-video bg-slate-700/50 border border-slate-600 rounded-lg flex items-center justify-center">
-                  <project.icon className="h-12 w-12 text-gray-500" />
+                {/* Project Image */}
+                <div className="aspect-video bg-slate-700/50 border border-slate-600 rounded-lg overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
 
                 {/* Description */}
