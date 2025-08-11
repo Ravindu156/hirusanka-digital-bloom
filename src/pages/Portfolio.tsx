@@ -2,6 +2,8 @@ import { ExternalLink, Github, Star, Users, ShoppingCart, BookOpen } from "lucid
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import perfumePulseImage from "@/components/Images/projects/purfumepulse.jpg";
+import recipeRealmImage from "@/components/Images/projects/reciperealm.jpg";
 
 const Portfolio = () => {
   const projects = [
@@ -10,7 +12,7 @@ const Portfolio = () => {
       title: "PerfumePulse",
       category: "E-commerce Platform",
       description: "A sophisticated e-commerce perfume platform featuring personalized recommendation system, advanced wishlist functionality, secure payment integration, and comprehensive inventory management.",
-      image: "/placeholder.svg",
+      image: perfumePulseImage,
       icon: ShoppingCart,
       achievements: [
         "85% user satisfaction rate",
@@ -35,7 +37,7 @@ const Portfolio = () => {
       title: "RecipeRealm",
       category: "Smart Recipe Platform",
       description: "An intelligent recipe suggestion platform with machine learning-powered preference learning, advanced search capabilities, nutritional information integration, and personalized meal planning.",
-      image: "/placeholder.svg",
+      image: recipeRealmImage,
       icon: BookOpen,
       achievements: [
         "70% improved recipe accuracy",
