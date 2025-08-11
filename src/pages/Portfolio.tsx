@@ -222,21 +222,27 @@ const Portfolio = () => {
                 {/* Action Buttons */}
                 <div className="flex gap-3">
                   {project.links.live && (
-                    <Button size="sm" className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      View Live
+                    <Button asChild size="sm" className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600">
+                      <a href={project.links.live} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        View Live
+                      </a>
                     </Button>
                   )}
                   {project.links.github && (
-                    <Button variant="outline" size="sm" className="flex-1 bg-slate-700/50 text-white border-slate-600 hover:bg-cyan-500/20 hover:text-cyan-400 hover:border-cyan-400">
-                      <Github className="mr-2 h-4 w-4" />
-                      Code
+                    <Button asChild variant="outline" size="sm" className="flex-1 bg-slate-700/50 text-white border-slate-600 hover:bg-cyan-500/20 hover:text-cyan-400 hover:border-cyan-400">
+                      <a href={project.links.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-2 h-4 w-4" />
+                        Code
+                      </a>
                     </Button>
                   )}
                   {project.links.case_study && (
-                    <Button variant="outline" size="sm" className="flex-1 bg-slate-700/50 text-white border-slate-600 hover:bg-cyan-500/20 hover:text-cyan-400 hover:border-cyan-400">
-                      <BookOpen className="mr-2 h-4 w-4" />
-                      Case Study
+                    <Button asChild variant="outline" size="sm" className="flex-1 bg-slate-700/50 text-white border-slate-600 hover:bg-cyan-500/20 hover:text-cyan-400 hover:border-cyan-400">
+                      <a href={project.links.case_study} target="_blank" rel="noopener noreferrer">
+                        <BookOpen className="mr-2 h-4 w-4" />
+                        Case Study
+                      </a>
                     </Button>
                   )}
                 </div>
