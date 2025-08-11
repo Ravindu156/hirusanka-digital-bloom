@@ -76,7 +76,7 @@ const Portfolio = () => {
         growth: "300%"
       },
       links: {
-        live: "#",
+        live: "https://www.ceylonhandloom.com",
         case_study: "#"
       }
     },
@@ -101,7 +101,7 @@ const Portfolio = () => {
         traffic: "200%"
       },
       links: {
-        live: "#",
+        live: "https://www.smsgarment.com",
         case_study: "#"
       }
     }
